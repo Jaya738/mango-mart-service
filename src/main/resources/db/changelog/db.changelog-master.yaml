@@ -1,0 +1,6 @@
+databaseChangeLog:
+  - changeSet:
+      id: create-table-seller
+      author: jaya
+      sqlFile:
+        path: db/changelog/create_seller_table.sql
