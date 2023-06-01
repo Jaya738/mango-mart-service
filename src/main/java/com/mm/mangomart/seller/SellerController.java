@@ -12,6 +12,7 @@ public class SellerController {
     @PostMapping(value = "/seller")
     @ResponseStatus(code = HttpStatus.CREATED)
     public void createSeller(@RequestBody Seller sellerRequest) {
+
         sellerService.saveSeller(sellerRequest);
     }
 }
