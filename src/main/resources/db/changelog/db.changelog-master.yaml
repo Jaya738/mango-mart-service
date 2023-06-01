@@ -4,3 +4,8 @@ databaseChangeLog:
       author: jaya
       sqlFile:
         path: db/changelog/create_seller_table.sql
+  - changeSet:
+      id: create-table-mangostock
+      author: jagss
+      sqlFile:
+        path: db/changelog/create_mango_stock_list_table.sql
