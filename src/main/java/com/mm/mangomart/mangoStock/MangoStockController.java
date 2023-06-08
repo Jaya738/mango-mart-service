@@ -2,10 +2,9 @@ package com.mm.mangomart.mangoStock;
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.http.HttpStatus;
-import org.springframework.web.bind.annotation.PostMapping;
-import org.springframework.web.bind.annotation.RequestBody;
-import org.springframework.web.bind.annotation.ResponseStatus;
-import org.springframework.web.bind.annotation.RestController;
+import org.springframework.web.bind.annotation.*;
+
+import java.util.List;
 
 @RestController
 @RequiredArgsConstructor
@@ -18,6 +17,13 @@ public class MangoStockController {
     public void createMangoStock(@RequestBody MangoStock mangoStockRequest){
 
         mangoStockService.saveMangoStock(mangoStockRequest);
+    }
+
+    @GetMapping(value = "/getMangoStockList")
+    @ResponseStatus(code = HttpStatus.OK)
+    public List<MangoStock> retrieveAllMangoStock(){
+
+            return  mangoStockService.getAllStock();
     }
 
 }

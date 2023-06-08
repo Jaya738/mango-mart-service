@@ -3,6 +3,8 @@ package com.mm.mangomart.mangoStock;
 import lombok.AllArgsConstructor;
 import org.springframework.stereotype.Service;
 
+import java.util.List;
+
 @Service
 @AllArgsConstructor
 public class MangoStockService {
@@ -13,5 +15,10 @@ public class MangoStockService {
         mangoStockRepository.save(mangoStockRequest);
 
     }
+
+    public List<MangoStock> getAllStock(){
+        return mangoStockRepository.findAll();
+    }
+
 
 }
